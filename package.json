@@ -1,0 +1,29 @@
+{
+  "name": "musicando",
+  "version": "1.0.0",
+  "description": "This is a REST API about songs using Express, MySQL and Sequelize ORM",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Molayasa/musicando.git"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "sql",
+    "express",
+    "mysql",
+    "node",
+    "javascript",
+    "sequelize"
+  ],
+  "author": "Molayasa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Molayasa/musicando/issues"
+  },
+  "homepage": "https://github.com/Molayasa/musicando#readme"
+}
