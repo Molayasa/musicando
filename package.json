@@ -4,6 +4,8 @@
   "description": "This is a REST API about songs using Express, MySQL and Sequelize ORM",
   "main": "src/server.js",
   "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +27,11 @@
   "bugs": {
     "url": "https://github.com/Molayasa/musicando/issues"
   },
-  "homepage": "https://github.com/Molayasa/musicando#readme"
+  "homepage": "https://github.com/Molayasa/musicando#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
