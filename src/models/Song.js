@@ -4,12 +4,16 @@ const sequelize = require('../config/db');
 class Song extends Model {
   static associate(models) {
     // define association here
+    Song.belongsTo(models.Artist, {
+      foreignKey: 'artist_id',
+      as: 'artist',
+    });
   }
 }
 
 Song.init(
   {
-    title: DataTypes.STRING(45),
+    title: { type: DataTypes.STRING(45), allowNull: false },
     length: DataTypes.INTEGER(11),
   },
   {
