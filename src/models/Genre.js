@@ -4,6 +4,10 @@ const sequelize = require('../config/db');
 class Genre extends Model {
   static associate(models) {
     // define association here
+    Genre.hasMany(models.Song, {
+      foreignKey: 'genre_id',
+      as: 'songs',
+    });
   }
 }
 

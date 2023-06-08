@@ -8,6 +8,16 @@ class Song extends Model {
       foreignKey: 'artist_id',
       as: 'artist',
     });
+
+    Song.belongsTo(models.Album, {
+      foreignKey: 'album_id',
+      as: 'album',
+    });
+
+    Song.belongsTo(models.Genre, {
+      foreignKey: 'genre_id',
+      as: 'genre',
+    });
   }
 }
 
