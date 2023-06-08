@@ -5,15 +5,12 @@ const { json } = require('express');
 const songRouter = require('./routers/song.router');
 
 const BASE_URL = '/api/songs';
-const PORT = process.env.PORT || 3000;
-const app = express();
+const server = express();
 
 // Pre-routes Middleware
-app.use(json());
+server.use(json());
 
 // Routes
-app.use(BASE_URL, songRouter);
+server.use(BASE_URL, songRouter);
 
-app.listen(PORT, () => {
-  console.log(`Server listening on PORT: ${PORT}`);
-});
+module.exports = server;

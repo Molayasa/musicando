@@ -2,10 +2,10 @@
   "name": "musicando",
   "version": "1.0.0",
   "description": "This is a REST API about songs using Express, MySQL and Sequelize ORM",
-  "main": "src/server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,7 +29,10 @@
   },
   "homepage": "https://github.com/Molayasa/musicando#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^3.3.3",
+    "sequelize": "^6.32.0",
+    "sequelize-cli": "^6.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
