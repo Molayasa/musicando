@@ -1,15 +1,7 @@
-const { Model } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
 
-class Artist extends Model {
-  static associate(models) {
-    // define association here
-    Artist.hasMany(models.Song, {
-      foreignKey: 'artist_id',
-      as: 'songs',
-    });
-  }
-}
+class Artist extends Model {}
 
 Artist.init(
   {

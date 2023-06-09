@@ -1,25 +1,14 @@
-const { Model } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/db');
+const Album = require('./Album');
+const Artist = require('./Artist');
+const Genre = require('./Genre');
 
-class Song extends Model {
-  static associate(models) {
-    // define association here
-    Song.belongsTo(models.Artist, {
-      foreignKey: 'artist_id',
-      as: 'artist',
-    });
+console.log('Album: ', Album);
+console.log('Artist: ', Artist);
+console.log('Genre: ', Genre);
 
-    Song.belongsTo(models.Album, {
-      foreignKey: 'album_id',
-      as: 'album',
-    });
-
-    Song.belongsTo(models.Genre, {
-      foreignKey: 'genre_id',
-      as: 'genre',
-    });
-  }
-}
+class Song extends Model {}
 
 Song.init(
   {
@@ -32,5 +21,33 @@ Song.init(
     underscored: true,
   }
 );
+
+// Define associations
+Album.hasMany(Song, {
+  foreignKey: 'album_id',
+  as: 'songs',
+});
+Song.belongsTo(Album, {
+  foreignKey: 'album_id',
+  as: 'album',
+});
+
+Artist.hasMany(Song, {
+  foreignKey: 'artist_id',
+  as: 'songs',
+});
+Song.belongsTo(Artist, {
+  foreignKey: 'artist_id',
+  as: 'artist',
+});
+
+Genre.hasMany(Song, {
+  foreignKey: 'genre_id',
+  as: 'songs',
+});
+Song.belongsTo(Genre, {
+  foreignKey: 'genre_id',
+  as: 'genre',
+});
 
 module.exports = Song;
