@@ -37,7 +37,7 @@ const getSong = async (req, res) => {
     console.error('There was a problem getting songs', error);
     res
       .status(500)
-      .json({ error: "There's a problem with the server. Try again later" });
+      .json({ message: "There's a problem with the server. Try again later" });
   }
 };
 

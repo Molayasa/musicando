@@ -17,7 +17,7 @@ const postSong = async (req, res) => {
     console.error(error);
     res
       .status(500)
-      .json({ error: "There's a problem with the server. Try again later" });
+      .json({ message: "There's a problem with the server. Try again later" });
   }
 };
 
