@@ -4,10 +4,6 @@ const Album = require('./Album');
 const Artist = require('./Artist');
 const Genre = require('./Genre');
 
-console.log('Album: ', Album);
-console.log('Artist: ', Artist);
-console.log('Genre: ', Genre);
-
 class Song extends Model {}
 
 Song.init(
